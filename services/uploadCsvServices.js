@@ -18,7 +18,7 @@ module.exports = (multer({
 
         // Nome que deve ser atribuido ao arquivo
         filename: (req, file, cb) => {
-            cb(null, Date.now().toString() + Math.round(Math.random() * 1E9) + path.extname(file.originalname));
+            cb(null, Date.now().toString() + Math.round(Math.random()) + path.extname(file.originalname));
         }
     }),
 
